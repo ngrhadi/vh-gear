@@ -13,6 +13,7 @@ const Layout = ({ children, title = 'This is the default title' }: Props) => (
       <title>{title}</title>
       <meta charSet="utf-8" />
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      <link rel="icon" href="https://vaulthunters.gg/assets/vh-logo-sm.3382d4ce.png" />
     </Head>
     <header>
       <nav>
