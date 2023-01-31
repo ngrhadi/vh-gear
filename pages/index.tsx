@@ -14,6 +14,16 @@ const IndexPage = (props) => {
         className="logo-main"
       />
       <h1>GEAR RESEARCH</h1>
+      <p>
+        For more information please visit{' '}
+        <Link
+          target="_blank"
+          href="https://vaulthunters.gg/gear"
+          rel="noreferrer noopener"
+        >
+          VH-Site
+        </Link>
+      </p>
     </Layout>
   );
 };
