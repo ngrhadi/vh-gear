@@ -1,0 +1,18 @@
+query idol_idonaQuery {
+  idol_idona {
+    id
+    modifiers {
+      implicit {
+        tiers {
+          maxLevel
+          minLevel
+          value {
+            step
+            min
+            max
+          }
+        }
+      }
+    }
+  }
+}

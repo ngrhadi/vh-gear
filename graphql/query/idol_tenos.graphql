@@ -1,0 +1,18 @@
+query idol_tenosQuery {
+  idol_tenos {
+    id
+    modifiers {
+      implicit {
+        tiers {
+          maxLevel
+          minLevel
+          value {
+            step
+            min
+            max
+          }
+        }
+      }
+    }
+  }
+}

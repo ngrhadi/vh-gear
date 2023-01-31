@@ -1,0 +1,39 @@
+query BootsQuery {
+  boots {
+    id
+    modifiers {
+      implicit {
+        color
+        id
+        limitations
+        name
+        tiers {
+          maxLevel
+          minLevel
+          value {
+            max
+            min
+            step
+          }
+          weight
+        }
+      }
+      prefix {
+        color
+        id
+        limitations
+        name
+        tiers {
+          maxLevel
+          minLevel
+          value {
+            max
+            min
+            step
+          }
+          weight
+        }
+      }
+    }
+  }
+}

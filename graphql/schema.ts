@@ -2,9 +2,9 @@ import { gql } from 'apollo-server-micro';
 
 export const typeDefs = gql`
   type Value {
-    min: Int
-    max: Int
-    step: Int
+    min: Float
+    max: Float
+    step: Float
   }
 
   type Tiers {
@@ -50,14 +50,58 @@ export const typeDefs = gql`
     modifiers: Modifiers
   }
 
+  type ValueIdol {
+    min: Float
+    max: Float
+    step: Float
+  }
+
+  type TiersIdol {
+    minLevel: Int
+    maxLevel: Int
+    weight: Int
+    value: ValueIdol
+  }
+
+  type SuffixIdol {
+    id: String
+    name: String
+    color: String
+    limitations: [String]
+    tiers: [TiersIdol]
+  }
+
+  type ImplicitIdol {
+    id: String
+    name: String
+    color: String
+    limitations: [String]
+    tiers: [TiersIdol]
+  }
+
+  type ModifiersIdol {
+    suffix: [Suffix]
+    prefix: [String]
+    implicit: [Implicit]
+  }
+
+  type Idol {
+    id: String
+    name: String
+    modifiers: ModifiersIdol
+  }
+
   type Query {
-    swords: [Gear]!
+    swords: [Gear]
     axes: [Gear]
-    chesplates: [Gear]
+    chestplates: [Gear]
     boots: [Gear]
-    legings: [Gear]
+    leggings: [Gear]
     helmets: [Gear]
-    shileds: [Gear]
-    idol: [Gear]
+    shields: [Gear]
+    idol_idona: [Idol]
+    idol_tenos: [Idol]
+    idol_wendaar: [Idol]
+    idol_valera: [Idol]
   }
 `;

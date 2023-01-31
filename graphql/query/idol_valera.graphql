@@ -1,0 +1,40 @@
+query idol_valeraQuery {
+  idol_valera {
+    id
+    modifiers {
+      implicit {
+        tiers {
+          maxLevel
+          minLevel
+          value {
+            step
+            min
+            max
+          }
+          weight
+        }
+        name
+        limitations
+        id
+        color
+      }
+      prefix
+      suffix {
+        color
+        id
+        limitations
+        name
+        tiers {
+          maxLevel
+          minLevel
+          value {
+            max
+            min
+            step
+          }
+          weight
+        }
+      }
+    }
+  }
+}

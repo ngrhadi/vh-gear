@@ -1,6 +1,6 @@
 import { API } from '../lib/vhAPI';
 
-export async function useChesptlate() {
+export async function fetchGear(v: string) {
   const config = {
     headers: {
       'Content-Type': 'application/json',
@@ -8,8 +8,8 @@ export async function useChesptlate() {
   };
 
   try {
-    const res = await API.get(`chestplate`, config);
-    return res.data;
+    const request = await API.get(v, config);
+    return request.data;
   } catch (err) {
     console.log(err);
   }

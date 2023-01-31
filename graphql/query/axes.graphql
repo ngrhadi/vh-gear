@@ -1,0 +1,19 @@
+query AxesQuery {
+  axes {
+    id
+    name
+    modifiers {
+      prefix {
+        tiers {
+          maxLevel
+          minLevel
+          value {
+            max
+            min
+            step
+          }
+        }
+      }
+    }
+  }
+}
