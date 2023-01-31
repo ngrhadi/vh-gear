@@ -1,0 +1,48 @@
+@import 'https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap';
+@import 'https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@1&display=swap';
+@import 'https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap';
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+    background-color: #0d1014;
+    font-family: 'Roboto', Helvetica, sans-serif;
+    color: #c5c5c5;
+    width: 100%;
+}
+
+.bg-hero {
+    z-index: -1;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.8)),url(../assets/hero-bg.62542c9a.png);
+    background-color: #25323e;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.main-content {
+    min-height: 100vh;
+   display: flex;
+   justify-content: center;
+   flex-direction: column;
+   align-items: center;
+}
+
+.logo-main {
+    margin: 30px;
+}
+
+@media (max-width: 468px) {
+    .bg-hero {
+        height: 100vh;
+        width: 100%;
+        background-color: #25323e;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}

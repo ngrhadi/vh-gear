@@ -1,31 +1,23 @@
 import Link from 'next/link'
-import Layout from '../components/Layout'
-import { GetStaticProps } from 'next';
-import axios from 'axios';
-import { API } from '../lib/vhAPI';
-import { Implicit, Prefix, Suffix } from '../interfaces/gear';
-import { useMemo, useState } from 'react';
+import Layout from '../components/Layout';
+import Image from 'next/image';
 
 const IndexPage = (props) => {
   return (
-    <Layout title="Vault Hunter - Gear Reasearch">
+    <Layout title="VH - Gear Reasearch">
       <h1>UNDER DEVELOPMENT</h1>
-
-      <p>
-        <Link href="/about">About</Link>
-      </p>
+      <Image
+        src={'/assets/vh-logo-lg.png'}
+        width={400}
+        height={200}
+        alt="logo-vh"
+        className="logo-main"
+      />
+      <h1>GEAR RESEARCH</h1>
     </Layout>
   );
 };
 
 export default IndexPage;
 
-// export const getStaticProps: GetStaticProps = async () => {
-//   const chesplate = useChesptlate();
 
-//   return {
-//     props: {
-//       chesplate: chesplate,
-//     },
-//   };
-// };

@@ -3,31 +3,34 @@ import Link from 'next/link'
 import Head from 'next/head'
 
 type Props = {
-  children?: ReactNode
-  title?: string
-}
+  children?: ReactNode;
+  title?: string;
+};
 
 const Layout = ({ children, title = 'This is the default title' }: Props) => (
-  <div>
+  <div className="bg-hero">
     <Head>
       <title>{title}</title>
       <meta charSet="utf-8" />
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-      <link rel="icon" href="https://vaulthunters.gg/assets/vh-logo-sm.3382d4ce.png" />
+      <link
+        rel="icon"
+        href="https://vaulthunters.gg/assets/vh-logo-sm.3382d4ce.png"
+      />
     </Head>
     <header>
-      <nav>
+      {/* <nav>
         <Link href="/">Home</Link> | <Link href="/about">About</Link> |{' '}
         <Link href="/users">Users List</Link> |{' '}
         <a href="/api/users">Users API</a>
-      </nav>
+      </nav> */}
     </header>
-    {children}
-    <footer>
+    <main className="main-content">{children}</main>
+    {/* <footer>
       <hr />
       <span>I'm here to stay (Footer)</span>
-    </footer>
+    </footer> */}
   </div>
-)
+);
 
 export default Layout
