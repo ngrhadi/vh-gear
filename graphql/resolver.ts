@@ -1,4 +1,4 @@
-import { fetchGear } from '../hooks/useChesplate';
+import { fetchGear } from '../hooks/fetchData';
 import { API } from '../lib/vhAPI';
 
 export const resolvers = {

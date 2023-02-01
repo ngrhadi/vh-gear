@@ -1,9 +1,12 @@
 query ChestplatesQuery {
   chestplates {
     id
-    name
     modifiers {
-      prefix {
+      implicit {
+        color
+        id
+        limitations
+        name
         tiers {
           maxLevel
           minLevel
@@ -12,8 +15,42 @@ query ChestplatesQuery {
             min
             step
           }
+          weight
+        }
+      }
+      prefix {
+        color
+        id
+        limitations
+        name
+        tiers {
+          maxLevel
+          minLevel
+          value {
+            max
+            min
+            step
+          }
+          weight
+        }
+      }
+      suffix {
+        color
+        id
+        limitations
+        name
+        tiers {
+          maxLevel
+          minLevel
+          value {
+            max
+            min
+            step
+          }
+          weight
         }
       }
     }
+    name
   }
 }
